@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Gadgets | Gadgets Nigeria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="index.css">
+    <!-- <link rel="stylesheet" href="GADGET2.css"> -->
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+            <p>Loading Cutting-Edge Gadgets...</p>
+        </div>
+    </div>
+
+    <!-- Hero Section with Parallax -->
+    <header id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <video autoplay muted loop class="hero-video">
+            <source src="https://cdn.pixabay.com/video/2023/06/22/168343-838892838_large.mp4" type="video/mp4">
+        </video>
+        <nav class="navbar">
+    <div class="container">
+        <a href="#" class="logo">
+            <img src="Assets/IMG/logo2.png" alt="Gadgets Nigeria">
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#hero">Home</a></li> <!-- Changed to #hero -->
+            <li><a href="#featured">Smartphones</a></li> <!-- Linked to featured section -->
+            <li><a href="#featured">Laptops</a></li> <!-- Ensure you have this section ID -->
+            <li><a href="#feature">Categories</a></li> <!-- Ensure you have this section ID -->
+            <li><a href="#deals">Deals</a></li> <!-- Already correct -->
+            <li><a href="#about">About</a></li> <!-- Already correct -->
+            <li><a href="#contact">Contact</a></li> <!-- Already correct -->
+            <li class="nav-cta"><a href="#" id="cart-button"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
+        </ul>
+    </div>
+</nav>
+
+        <div class="hero-content">
+            <div class="container">
+                <h1 class="hero-title" data-aos="fade-up">Next Generation Gadgets</h1>
+                <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">Discover the latest tech innovations at unbeatable prices</p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#featured" class="btn btn-primary">Shop Now</a>
+                    <a href="#deals" class="btn btn-outline">View Deals</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Featured Brands Section -->
+<section class="featured-brands">
+    <div class="container">
+        <h2 class="section-title">Trusted By Leading Brands</h2>
+        <div class="brands-slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide brand-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung" loading="lazy">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" loading="lazy">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP" loading="lazy">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="Asset/img/dell logo.png" alt="Dell" loading="lazy">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="Asset/img/xiomi.png" alt="Xiaomi" loading="lazy">
+                </div>
+                <div class="swiper-slide brand-item">
+                    <img src="Asset/img/huwawi.png" alt="Huawei" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Featured Gadgets Section -->
+    <section id="featured" class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Gadgets</h2>
+            <p class="section-subtitle">The best tech experience starts here</p>
+
+            <div class="product-grid">
+                <!-- Product Card 1 -->
+                <div class="product-card" data-aos="fade-up">
+                    <div class="product-badge">Best Seller</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1610792516307-ea5acd9c3b00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="iPhone 15 Pro">
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">iPhone 15 Pro Max</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(428 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₦950,000</span>
+                            <span class="old-price">₦1,050,000</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="product-badge">New Arrival</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="MacBook Pro">
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">MacBook Pro M2</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <span>(196 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₦1,250,000</span>
+                            <span class="old-price">₦1,350,000</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Galaxy Watch">
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Samsung Galaxy Watch 6</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(315 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₦180,000</span>
+                            <span class="old-price">₦200,000</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="product-badge">Limited Stock</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1629131726692-1accd0c53ce0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AirPods Pro">
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">AirPods Pro (2nd Gen)</h3>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(278 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₦150,000</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center" data-aos="fade-up">
+                <a href="" class="btn btn-outline">View All Gadgets</a>
+            </div>
+        </div> 
+    </section>
+
+    <!-- Hot Deals Section -->
+<section id="deals" class="hot-deals-section">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">🔥 Hot Deals</h2>
+      <p class="section-subtitle">Limited-time offers on premium gadgets</p>
+    </div>
+
+    <div class="deal-filters">
+      <button class="filter-btn active" data-filter="all">All Deals</button>
+      <button class="filter-btn" data-filter="discount">Big Discounts</button>
+      <button class="filter-btn" data-filter="bundle">Bundle Offers</button>
+      <button class="filter-btn" data-filter="clearance">Clearance</button>
+    </div>
+
+    <div class="deals-grid">
+      <!-- Deal Item 1 -->
+      <div class="deal-card" data-category="discount">
+        <div class="deal-badge">-25%</div>
+        <div class="deal-image">
+          <img src="Asset/img/galaxy.jpeg" alt="Samsung Deal">
+          <div class="deal-countdown" data-end="2023-12-31">Ends in: 2d 12h 30m</div>
+        </div>
+        <div class="deal-info">
+          <h3>Samsung Galaxy S23 FE</h3>
+          <div class="price-container">
+            <span class="current-price">₦375,000</span>
+            <span class="original-price">₦500,000</span>
+          </div>
+          <div class="deal-meta">
+            <span class="sold">19 sold</span>
+            <span class="stock">Only 4 left!</span>
+          </div>
+          <button class="btn btn-deal">Grab Deal</button>
+        </div>
+      </div>
+
+      <!-- Deal Item 2 -->
+      <div class="deal-card" data-category="bundle">
+        <div class="deal-badge">Bundle</div>
+        <div class="deal-image">
+          <img src="Asset/img/ipad.jpeg" alt="iPad Bundle">
+        </div>
+        <div class="deal-info">
+          <h3>iPad Air + Apple Pencil</h3>
+          <div class="price-container">
+            <span class="current-price">₦450,000</span>
+            <span class="value">(Value: ₦600,000)</span>
+          </div>
+          <div class="deal-meta">
+            <span class="sold">8 sold</span>
+          </div>
+          <button class="btn btn-deal">Grab Deal</button>
+        </div>
+      </div>
+
+      <!-- Deal Item 3 -->
+      <div class="deal-card" data-category="discount">
+        <div class="deal-badge">-10%</div>
+        <div class="deal-image">
+          <img src="Asset/img/macbook.jpeg" alt="MacBook Deal">
+          <div class="deal-countdown" data-end="2023-12-31">Ends in: 2d 12h 30m</div>
+        </div>
+        <div class="deal-info">
+          <h3>MacBook Air M1</h3>
+          <div class="price-container">
+            <span class="current-price">₦575,000</span>
+            <span class="original-price">₦650,000</span>
+          </div>
+          <div class="deal-meta">
+            <span class="sold">15 sold</span>
+            <span class="stock">Only 5 left!</span>
+          </div>
+          <button class="btn btn-deal">Grab Deal</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Alert Notification -->
+<div class="alert-notification" id="deal-alert">
+  <span class="alert-message">Coming Soon!</span>
+  <span class="close-alert">&times;</span>
+</div>
+</section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content" data-aos="fade-right">
+                <h2>Tech Revolution Sale</h2>
+                <p>Up to 35% off on selected gadgets and accessories</p>
+                <div class="countdown-timer">
+                    <div class="countdown-item">
+                        <span id="days">00</span>
+                        <span>Days</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="hours">00</span>
+                        <span>Hours</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="minutes">00</span>
+                        <span>Minutes</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span id="seconds">00</span>
+                        <span>Seconds</span>
+                    </div>
+                </div>
+                <a href="#deals" class="btn btn-primary">Shop the Sale</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Trusted by thousands of happy customers</p>
+
+            <div class="testimonial-slider swiper">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"I got my iPhone delivered within 24 hours! The phone was brand new and sealed. Will definitely shop here again."</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="John D.">
+                                <div>
+                                    <h4>John D.</h4>
+                                    <span>Lagos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p>"Authentic products at competitive prices. My MacBook arrived well-packaged and in perfect condition. Highly recommend Gadgets Nigeria!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Amina K.">
+                                <div>
+                                    <h4>Amina K.</h4>
+                                    <span>Abuja</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>"Great selection of gadgets. I was able to compare different models and get expert advice before making my purchase. Very satisfied!"</p>
+                            <div class="testimonial-author">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Emeka O.">
+                                <div>
+                                    <h4>Emeka O.</h4>
+                                    <span>Port Harcourt</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="feature" class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <a href="webpages/smartphones.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Smartphones">
+                    <h3>Smartphones</h3>
+                </a>
+                <a href="webpages/laptops.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Laptops">
+                    <h3>Laptops</h3>
+                </a>
+                <a href="webpages/wearables.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Wearables">
+                    <h3>Wearables</h3>
+                </a>
+                <a href="webpages/accessories.html" class="category-card">
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Accessories">
+                    <h3>Accessories</h3>
+                </a>
+            </div>
+        </div>
+    </section>
+
+<!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="about-content">
+            <h2 class="section-title">About Gadgets Nigeria</h2>
+            <p>We are Nigeria's premier destination for premium gadgets and tech accessories. Since 2015, we've been providing authentic, high-quality tech products to enthusiasts across the country.</p>
+            <p>Our mission is to bring the latest technology to Nigerian consumers at competitive prices with exceptional customer service.</p>
+            <a href="#contact" class="btn btn-primary">Contact Us</a>
+        </div>
+        <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1555421689-3f034debb7a6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Our Store">
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Victoria Island, Lagos</li>
+                    <li><i class="fas fa-phone"></i> +234 812 345 6789</li>
+                    <li><i class="fas fa-envelope"></i> info@gadgetsnigeria.com</li>
+                    <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM, Sat: 10AM - 4PM</li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <form>
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content" data-aos="fade-up">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest tech, new arrivals, and exclusive deals</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Gadgets Nigeria</h3>
+                    <p>Your premier destination for the latest gadgets and tech accessories in Nigeria.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Lagos, Nigeria </li>
+                        <li><i class="fas fa-phone"></i> +234 812 345 6789</li>
+                        <li><i class="fas fa-envelope"></i> info@gadgetsnigeria.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Gadgets Nigeria. All Rights Reserved.</p>
+                <div class="payment-methods">
+                    <img src="https://via.placeholder.com/40x25?text=Visa" alt="Visa">
+                    <img src="https://via.placeholder.com/40x25?text=Mastercard" alt="Mastercard">
+                    <img src="https://via.placeholder.com/40x25?text=Verve" alt="Verve">
+                    <img src="https://via.placeholder.com/40x25?text=PayPal" alt="PayPal">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

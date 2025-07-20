@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Smartphones | Gadgets Nigeria</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="GADGET2.css"> -->
+    <style>
+        /* ===== PRODUCT CATEGORY PAGE STYLES ===== */
+
+/* Category Hero Section */
+.category-hero {
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: 70px; /* Account for fixed navbar */
+}
+
+.category-hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.category-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.category-hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Product Filters Section */
+.product-filters {
+    background-color: #f8fafc;
+    padding: 2rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+.filter-group select {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    background-color: white;
+    font-family: inherit;
+    transition: all 0.3s ease;
+}
+
+.filter-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Product Showcase Section */
+.product-showcase {
+    padding: 4rem 0;
+}
+
+.product-showcase .section-header {
+    margin-bottom: 2rem;
+}
+
+/* Enhanced Product Cards for Category Pages */
+.product-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.product-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1e293b;
+}
+
+.product-specs {
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+    color: #64748b;
+    flex-grow: 1;
+}
+
+.product-specs span {
+    display: block;
+    margin-bottom: 0.3rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.product-specs span::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2563eb;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    margin: 0.8rem 0;
+    color: #f59e0b;
+}
+
+.product-rating span {
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-left: 0.5rem;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.current-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+.old-price {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: #64748b;
+    margin-left: 0.5rem;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 0.7rem;
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.add-to-cart:hover {
+    background-color: #1d4ed8;
+}
+
+/* Product Badges */
+.product-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.product-badge.best-seller {
+    background-color: #10b981;
+}
+
+.product-badge.new-arrival {
+    background-color: #f59e0b;
+}
+
+.product-badge[data-badge="limited"] {
+    background-color: #ef4444;
+}
+
+.product-badge[data-badge="bundle"] {
+    background-color: #8b5cf6;
+}
+
+/* Product Actions */
+.product-actions {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.product-card:hover .product-actions {
+    opacity: 1;
+}
+
+.quick-view,
+.add-wishlist {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    color: #1e293b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.quick-view:hover {
+    background-color: #2563eb;
+    color: white;
+}
+
+.add-wishlist:hover {
+    color: #ef4444;
+}
+
+.add-wishlist.active i {
+    color: #ef4444;
+    font-weight: 900;
+}
+
+/* Comparison Banner */
+.comparison-banner {
+    background-color: #2563eb;
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.comparison-banner h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.comparison-banner p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    opacity: 0.9;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    gap: 1rem;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.page-numbers span {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-numbers span.active {
+    background-color: #2563eb;
+    color: white;
+}
+
+.page-numbers span:not(.active):hover {
+    background-color: #e2e8f0;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .category-hero {
+        height: 300px;
+    }
+    
+    .category-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .filter-options {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        min-width: 100%;
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .category-hero {
+        height: 250px;
+        margin-top: 60px;
+    }
+    
+    .category-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .category-hero p {
+        font-size: 1rem;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-image {
+        height: 200px;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-inner"></div>
+            <p>Loading Cutting-Edge Smartphones...</p>
+        </div>
+    </div>
+
+    <!-- Navigation (Same as homepage) -->
+    <!-- <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="Assets/IMG/logo2.png" alt="Gadgets Nigeria">
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="smartphones.html" class="active">Smartphones</a></li>
+                <li><a href="laptops.html">Laptops</a></li>
+                <li><a href="wearables.html">Wearables</a></li>
+                <li><a href="accessories.html">Accessories</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="nav-cta"><a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <!-- Smartphones Hero Section -->
+    <section class="category-hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80');">
+        <div class="container">
+            <h1>Premium Smartphones</h1>
+            <p>Discover the latest mobile technology with our curated selection of flagship devices</p>
+        </div>
+    </section>
+
+    <!-- Smartphone Filters -->
+    <section class="product-filters">
+        <div class="container">
+            <div class="filter-options">
+                <div class="filter-group">
+                    <label for="brand-filter">Brand:</label>
+                    <select id="brand-filter">
+                        <option value="all">All Brands</option>
+                        <option value="apple">Apple</option>
+                        <option value="samsung">Samsung</option>
+                        <option value="xiaomi">Xiaomi</option>
+                        <option value="huawei">Huawei</option>
+                        <option value="tecno">Tecno</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="price-filter">Price Range:</label>
+                    <select id="price-filter">
+                        <option value="all">All Prices</option>
+                        <option value="0-50000">Under ₦50,000</option>
+                        <option value="50000-150000">₦50,000 - ₦150,000</option>
+                        <option value="150000-300000">₦150,000 - ₦300,000</option>
+                        <option value="300000+">Over ₦300,000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="os-filter">OS:</label>
+                    <select id="os-filter">
+                        <option value="all">All OS</option>
+                        <option value="ios">iOS</option>
+                        <option value="android">Android</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" id="apply-filters">Apply Filters</button>
+                <button class="btn btn-outline" id="reset-filters">Reset</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smartphones Grid -->
+    <section class="product-showcase">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Smartphone Collection</h2>
+                <p class="section-subtitle">Find the perfect device for your needs</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- iPhone 15 Pro -->
+                <div class="product-card" data-brand="apple" data-price="950000" data-os="ios">
+                    <div class="product-badge best-seller">Best Seller</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1695048134025-1e030a8d9fca?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="iPhone 15 Pro">
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">iPhone 15 Pro Max</h3>
+                        <div class="product-specs">
+                            <span>6.7" Super Retina XDR</span>
+                            <span>A17 Pro Chip</span>
+                            <span>48MP Camera</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(428 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₦950,000</span>
+                            <span class="old-price">₦1,050,000</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Samsung Galaxy S23 Ultra -->
+                <div class="product-card" data-brand="samsung" data-price="750000" data-os="android">
+                    <div class="product-badge">New Arrival</div>
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1678654340086-43c31f5ec9f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Samsung Galaxy S23 Ultra">
+                        <div class="product-actions">
+                            <button class="quick-view"><i class="fas fa-eye"></i></button>
+                            <button class="add-wishlist"><i class="far fa-heart"></i></button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Samsung Galaxy S23 Ultra</h3>
+                        <div class="product-specs">
+                            <span>6.8" Dynamic AMOLED</span>
+                            <span>Snapdragon 8 Gen 2</span>
+                            <span>200MP Camera</span>
+                        </div>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(392 reviews)</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="current-price">₦750,000</span>
+                            <span class="old-price">₦820,000</span>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Add more smartphones following the same pattern -->
+            </div>
+
+            <div class="pagination">
+                <button class="btn btn-outline"><i class="fas fa-chevron-left"></i> Previous</button>
+                <div class="page-numbers">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                </div>
+                <button class="btn btn-outline">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Smartphone Comparison Banner -->
+    <section class="comparison-banner">
+        <div class="container">
+            <h2>Not Sure Which Phone to Choose?</h2>
+            <p>Use our smartphone comparison tool to find the perfect device for your needs</p>
+            <a href="#" class="btn btn-primary">Compare Smartphones</a>
+        </div>
+    </section>
+
+    <!-- Footer (Same as homepage) -->
+    <footer class="footer">
+        <!-- Footer content from homepage -->
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="gadget.js"></script>
+    <script>
+        // Smartphone-specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            document.getElementById('apply-filters').addEventListener('click', function() {
+                const brandFilter = document.getElementById('brand-filter').value;
+                const priceFilter = document.getElementById('price-filter').value;
+                const osFilter = document.getElementById('os-filter').value;
+                
+                document.querySelectorAll('.product-card').forEach(card => {
+                    const matchesBrand = brandFilter === 'all' || card.dataset.brand === brandFilter;
+                    const matchesOS = osFilter === 'all' || card.dataset.os === osFilter;
+                    
+                    // Price range matching logic would be more complex in reality
+                    const matchesPrice = priceFilter === 'all' || 
+                                       (priceFilter === '300000+' && parseInt(card.dataset.price) >= 300000);
+                                       /* other price range checks */
+                    
+                    if (matchesBrand && matchesOS && matchesPrice) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+            
+            document.getElementById('reset-filters').addEventListener('click', function() {
+                document.getElementById('brand-filter').value = 'all';
+                document.getElementById('price-filter').value = 'all';
+                document.getElementById('os-filter').value = 'all';
+                document.querySelectorAll('.product-card').forEach(card => {
+                    card.style.display = 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
